@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "buck-surrogate-csv"
+version = "0.2.0"
+description = "Reproducible Buck-converter surrogate workflow with replaceable CSV data sources"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "joblib>=1.3,<2",
+  "matplotlib>=3.7,<4",
+  "numpy>=1.24,<3",
+  "pandas>=2.0,<3",
+  "scikit-learn>=1.3,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4,<9",
+  "ruff>=0.5,<1",
+]
+
+[project.scripts]
+buck-surrogate = "buck_surrogate.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

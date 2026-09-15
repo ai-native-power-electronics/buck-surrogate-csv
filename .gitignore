@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Generated artifacts
+data/*.csv
+!data/buck_data_template.csv
+!data/designs_to_predict_template.csv
+outputs/*
+!outputs/.gitkeep
