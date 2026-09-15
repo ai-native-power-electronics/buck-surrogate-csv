@@ -1,0 +1,7 @@
+{
+  "rows": 10000,
+  "repeats": 15,
+  "median_batch_seconds": 0.02866290000383742,
+  "median_microseconds_per_row": 2.866290000383742,
+  "median_rows_per_second": 348883.05086579476
+}
